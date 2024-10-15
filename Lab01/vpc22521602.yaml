@@ -1,5 +1,8 @@
 AWSTemplateFormatVersion: '2010-09-09'
-
+#Public DNS: ec2-54-153-239-209.ap-southeast-2.compute.amazonaws.com
+#Public IP: 54.153.239.209
+#Private IP: 10.0.2.173
+#.pem for SSH connect
 Description: VPC with Public and Private Subnet, Internet Gateway, NAT Gateway, Security Groups, and EC2 instances.
 
 Parameters: 
