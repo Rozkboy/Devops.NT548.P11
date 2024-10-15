@@ -51,7 +51,7 @@ Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
 - Thực hiện SSH sau kèm theo đường dẫn file .pem trước đó
 ssh -i /home/ec2-user/Downloads/Tuan1602EC2.pem ec2-user@10.0.2.173
 
-- Nếu không tồn tại file .pem và câu lệnh ssh truy cập vào Private EC2 báo lỗi Permission denied (publickey,gssapi-keyex,gssapi-with-mic). Thì hãy tải file .pem từ bên ngoài vào thư mục có sẵn sau đó gắn đường dẫn đến file.l .pem đó trong câu lệnh ssh kết nối đến Private EC2.
+- Nếu không tồn tại file .pem và câu lệnh ssh truy cập vào Private EC2 báo lỗi Permission denied (publickey,gssapi-keyex,gssapi-with-mic). Thì hãy tải file .pem từ bên ngoài vào thư mục có sẵn sau đó gắn đường dẫn đến file .pem đó trong câu lệnh ssh kết nối đến Private EC2.
 
 7. Kiểm tra kết nối Internet từ Private Instance qua NAT Gateway
 Từ Private EC2, kiểm tra kết nối Internet bằng cách:
