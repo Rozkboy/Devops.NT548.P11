@@ -45,6 +45,9 @@ Sau khi kết nối thành công vào Public EC2, thực hiện lệnh SSH sau �
 - Kiểm tra file .pem ở mục Dowloads
 ls /home/ec2-user/Downloads
 
+- Nếu không cung cấp file .pem, bạn sẽ gặp lỗi sau:
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+
 - Thực hiện SSH sau kèm theo đường dẫn file .pem trước đó
 ssh -i /home/ec2-user/Downloads/Tuan1602EC2.pem ec2-user@10.0.2.173
 
