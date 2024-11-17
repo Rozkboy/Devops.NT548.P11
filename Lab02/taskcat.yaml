@@ -1,0 +1,18 @@
+version: 1
+taskcat:
+  global:
+    s3_bucket: my-taskcat-bucket  # Dat ten S3 bucket De Taskcat luu tru cac files tam thoi
+    region: us-east-1  # Chon vung AWS ban muon kiem tra
+    create_stack: true  # Tu dong tao stack tu template khi kiem tra
+    delete_stack: true  # Tu dong xoa stack sau khi kiem tra hoan tat
+  scenarios:
+    default:
+      template: Group25.yaml  # Dat ten file template 
+      regions:
+        - us-east-1  # Kiem tra template o vung AWS us-east-1
+        - us-west-2  # Kiem tra template o vung AWS us-west-2
+      parameters:
+        VpcCIDR: "10.0.0.0/16"
+        PublicSubnetCIDR: "10.0.1.0/24"
+        PrivateSubnetCIDR: "10.0.2.0/24"
+        KeyName: "Group25"  # Thay the bang ten KeyPair da tao trong EC2

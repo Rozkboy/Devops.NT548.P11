@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.x
+    commands:
+      #cai dat cfn-lint va taskcat
+      - echo Installing cfn-lint and taskcat
+      - pip install cfn-lint
+      - pip install taskcat
+
+  build:
+    commands:
+      #Kiem tra ma CloudFormation voi cfn-lint
+      - echo Running cfn-lint to validate CloudFormation template
+      - cfn-lint Group25.yaml  # Kiem tra loi cu phap trong Group25.yaml
+
+      #Kiem tra CloudFormation voi Taskcat
+      - echo Running Taskcat to test CloudFormation template
+      - taskcat test -t Group25.yaml  # Kiem tra tinh dung dan cua template bang Taskcat
+
+artifacts:
+  files:
+    - Group25.yaml  #Dam bao ma CloudFormation duoc day len nhu artifacts sau khi build
